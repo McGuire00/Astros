@@ -1,0 +1,31 @@
+.player-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.player-team,
+.player-average {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Hover effect */
+.player-list-item:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
