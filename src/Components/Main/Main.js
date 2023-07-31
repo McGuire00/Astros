@@ -1,9 +1,10 @@
-import './Main.css';
+import "./Main.css";
 
+import PitcherList from "../PitcherList/PitcherList";
 function Main() {
   return (
     <div className="main">
-     Hello Main
+      <PitcherList />
     </div>
   );
 }
