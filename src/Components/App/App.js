@@ -6,20 +6,10 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 
 import Astros from "../../util/Astros";
-import PitcherList from "../PitcherList/PitcherList";
-
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <PitcherList />
-//     </div>
-//   );
-// };
-//
-// export default App;
 
 function App() {
   const [data, setData] = useState();
+  const [players, setPlayers] = useState();
 
   useEffect(() => {
     getPitchData();
@@ -28,12 +18,16 @@ function App() {
   function getPitchData() {
     Astros.getPitches().then((data) => {
       setData(data);
+
+      // Gets unique pitchers from data just received
+      const players = Astros.getUniquePitchers(data);
+      setPlayers(players);
     });
   }
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Main players={players} />
       <Footer />
     </div>
   );
