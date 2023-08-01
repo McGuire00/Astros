@@ -7,12 +7,13 @@ body {
 
 .container {
   max-width: 800px;
-  /*width: 500px;*/
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  height: 600px; /* Set a fixed height for the container */
+  overflow: auto; /* Add scrolling to the container */
 }
 
 .players-title {
