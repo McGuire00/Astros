@@ -26,12 +26,16 @@
 .header-nav-item {
   display: inline-block;
   margin: 0 10px;
+}
+
+/* Target the Link component with the .nav-link class */
+.nav-link {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
 }
 
-.header-nav-item:hover {
+.nav-link:hover {
   text-decoration: underline;
 }
