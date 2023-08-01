@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
+import Games from "../Games/Games";
+import PlayerDetailView from "../PlayerDetailView/PlayerDetailView";
 
 import Astros from "../../util/Astros";
 
@@ -25,11 +29,17 @@ function App() {
     });
   }
   return (
-    <div className="App">
-      <Header />
-      <Main players={players} />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main players={players} />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/pitcher/:pitcherId" element={<PlayerDetailView />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

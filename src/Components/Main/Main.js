@@ -1,11 +1,11 @@
 import "./Main.css";
 
-import PitcherList from "../PitcherList/PitcherList";
+import PitcherListView from "../PitcherListView/PitcherList";
 function Main({ players }) {
   return (
     <div className="main">
       <h2>MLB Player Stats</h2>
-      <PitcherList players={players} />
+      <PitcherListView players={players} />
     </div>
   );
 }
